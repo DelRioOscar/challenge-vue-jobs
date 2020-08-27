@@ -1,0 +1,50 @@
+.button-badge {
+    display: flex;
+    align-items: center;
+
+    .badge {
+        margin: 0;
+    }
+
+    @include desktop {
+        .badge--cyan:hover {
+            background-color: $text-cyan;
+            color: $primary-color;
+            cursor: context-menu;
+        }
+    }
+    
+}
+
+.btn {
+    outline: none;
+    border: 0;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.btn--primary {
+    @extend .btn;
+    background-color: $primary-color;
+    color: $background-card-primary-color;
+   
+}
+
+.btn--link {
+    @extend .btn;
+    background-color: $background-card-primary-color;
+    color: $primary-color;
+    font-weight: 600;
+}
+
+@include desktop {
+    .btn--primary:hover {
+        background-color: $very-dark-grayish-cyan;
+        color: $light-grayish-cyan;
+    }
+
+    .btn--link:hover {
+        text-decoration: underline;
+        text-decoration-color: $primary-color;
+    }
+}

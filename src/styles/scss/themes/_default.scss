@@ -1,0 +1,21 @@
+body {
+    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+    background-color: $light-grayish-cyan;
+}
+
+.main {
+    margin: 80px 25px;
+}
+
+.text--primary {
+    color: $text-primary;
+}
+
+.text--uppercase {
+    text-transform: uppercase;
+}
+
+.text--secondary {
+    color: $text-secondary;
+}

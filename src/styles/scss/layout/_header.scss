@@ -1,0 +1,25 @@
+.header {
+    background-image: url("assets/images/bg-header-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 158px;
+    width: 100%;
+    background-attachment: fixed;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    /* @include phone() {
+        position: static;
+        background-attachment: initial;
+    }
+ */
+    @include desktop() {
+        background-attachment: fixed;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}

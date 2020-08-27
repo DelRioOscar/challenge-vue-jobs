@@ -1,0 +1,32 @@
+.badge {
+    padding: 8px;
+    border-radius: 25px;
+    color: $background-card-primary-color;
+    margin: 10px 10px 10px 0px;
+    cursor: pointer;
+}
+
+.badge--primary {
+    background-color: $primary-color;
+}
+
+.badge--secondary {
+    background-color: $very-dark-grayish-cyan;
+}
+
+.badge--square {
+    border-radius: 5px;  
+}
+
+.badge--cyan {
+    background-color: $text-cyan;
+    color: $text-primary;
+    font-weight: 600;
+}
+
+@include desktop {
+    .badge--cyan:hover {
+        color: $text-cyan;
+        background-color: $primary-color;
+    }
+}

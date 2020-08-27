@@ -1,0 +1,108 @@
+.card {
+    .card-container {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        background-color: $background-card-primary-color;
+        padding: 30px 25px;
+        margin: 70px 0px;
+        position: relative;
+
+        &.--card-featured::before {
+            content: '';
+            background-color: $primary-color;
+            width: 5px;
+            height: 100%;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            left: 0;
+            top: 0;
+        }
+
+        .card__header {
+            border-bottom: 1px solid $dark-grayish-cyan;
+            padding-bottom: 18px;
+
+            .card__image {
+                top: -70px;
+                width: 75px;
+            }
+
+            .card__before-title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .card__sub-title {
+                .card__sub-title-text::after {
+                    content: "•";
+                    padding: 5px 4px 0px 6px;
+                }
+                .card__sub-title-text:last-child::after {
+                    content: "";
+                }
+            }
+        }
+
+        .card__body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    @include phone {
+        .card-container {
+            .card__header {
+                position: relative;
+                .card__image {
+                    position: absolute;
+                }
+
+                .card__before-title {
+                    .badge {
+                        font-size: 12px;
+                    }
+
+                    .card__company {
+                        margin: 20px 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include desktop {
+        .card-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .card__header {
+                border-bottom: 0;
+                padding-bottom: 18px;
+
+                display: flex;
+                align-items: center;
+
+                position: static;
+
+                .card__image {
+                    position: static;
+                    padding: 0px 28px 0px 5px;
+                }
+
+                .card__before-title {
+                    .card__company {
+                        margin: 0px;
+                    }
+                }
+
+                .card__title:hover {
+                    color: $primary-color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

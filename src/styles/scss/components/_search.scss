@@ -1,0 +1,29 @@
+.search {
+
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    margin: 0px 25px;
+
+    .search__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        background-color: $background-card-primary-color;
+        padding: 32px;
+
+        .search__badges {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .button-badge {
+            margin: 5px 15px 5px 0px;
+        }
+    }
+ 
+}
